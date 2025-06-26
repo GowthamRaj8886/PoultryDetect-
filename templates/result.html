@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poultry Disease Detection - Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- Navbar (optional if you have it in other pages) -->
+<nav class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+  <div class="flex items-center space-x-4">
+    <a href="/">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="App Logo" class="h-14 rounded-lg shadow-md">
+    </a>
+    <span class="text-2xl font-bold text-white">PoultryDetect+</span>
+  </div>
+  <div class="space-x-6 text-sm uppercase tracking-wider">
+    <a href="{{ url_for('index') }}" class="hover:text-green-400">Home</a>
+    <a href="{{ url_for('about') }}" class="hover:text-green-400">About</a>
+    <a href="{{ url_for('contact') }}" class="hover:text-green-400">Contact</a>
+    <a href="{{ url_for('training') }}" class="hover:text-green-400">Research & Training</a>
+  </div>
+</nav>
+
+
+<!-- Result Content -->
+<div class="text-center mt-12 px-6">
+    <h1 class="text-4xl text-green-400 font-bold mb-8">Disease Detection Result</h1>
+
+    <div class="text-green-400 text-2xl font-semibold mb-4">
+        Prediction: {{ prediction }}
+    </div>
+
+    <div class="text-blue-400 text-xl font-semibold mb-4">
+        Confidence: {{ confidence }}%
+    </div>
+
+    <div class="bg-gray-900 border border-gray-700 rounded-xl p-6 mt-8 w-full max-w-xl mx-auto shadow-lg">
+
+    <h2 class="text-2xl text-green-400 font-bold mb-4">Diagnosis Details</h2>
+
+    <div class="text-lg text-yellow-400 mb-4">
+        <span class="font-semibold">Recommended Medicine / Treatment:</span>
+        <p class="text-white mt-1">{{ medicine }}</p>
+    </div>
+
+    <div class="text-lg text-red-400 mb-2">
+        <span class="font-semibold">Common Symptoms:</span>
+        <p class="text-white mt-1">{{ symptoms }}</p>
+    </div>
+
+</div>
+<a href="{{ url_for('download_report') }}?pdf_path={{ pdf_path }}" 
+   class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold">
+   Download PDF Report
+</a>
+
+<a href="{{ url_for('vet_resources') }}"
+   class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold">
+   View Vet Research Resources
+</a>
+
+    <img src="{{ img_path }}" alt="Predicted Image" class="mt-6 rounded-lg shadow-md w-64 mx-auto">
+
+    <a href="{{ url_for('index') }}" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">Check Another Image</a>
+</div>
+
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen1.jpeg') }}" alt="Hen 1" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 2.jpeg') }}" alt="Hen 2" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 3.jpeg') }}" alt="Hen 3" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 4.jpeg') }}" alt="Hen 4" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+</div>
+<footer class="mt-12 bg-black border-t border-gray-700 text-center py-4 text-sm text-gray-400">
+  © 2025 PoultryDetect+. All rights reserved.
+</footer>
+
+
+
+</body>
+</html>

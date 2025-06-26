@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | PoultryDetect+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans min-h-screen">
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+    <div class="flex items-center space-x-4">
+      <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="h-16 w-16 rounded-lg shadow-md">
+      </a>
+      <span class="text-2xl font-bold text-white">PoultryDetect+</span>
+    </div>
+
+    <div class="space-x-6 text-sm uppercase tracking-wider">
+      <a href="{{ url_for('index') }}" class="hover:text-green-400">Home</a>
+      <a href="{{ url_for('about') }}" class="hover:text-green-400">About</a>
+      <a href="{{ url_for('contact') }}" class="hover:text-green-400">Contact</a>
+      <a href="{{ url_for('training') }}" class="hover:text-green-400">Research & Training</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="flex flex-col items-center text-center px-4 mt-12">
+    <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+    <p class="text-lg max-w-3xl text-gray-300">
+      Have a question or feedback? Reach out to the PoultryDetect+ team at <strong class="text-green-400">support@poultrydetect.com</strong>.
+    </p>
+  </main>
+  <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 px-6">
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen1.jpeg') }}" alt="Hen 1" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 2.jpeg') }}" alt="Hen 2" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 3.jpeg') }}" alt="Hen 3" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+  <div class="aspect-w-1 aspect-h-1">
+    <img src="{{ url_for('static', filename='hen 4.jpeg') }}" alt="Hen 4" class="object-cover w-full h-full rounded-lg shadow-lg">
+  </div>
+</div>
+
+<footer class="mt-12 bg-black border-t border-gray-700 text-center py-4 text-sm text-gray-400">
+  © 2025 PoultryDetect+. All rights reserved.
+</footer>
+
+</body>
+</html>

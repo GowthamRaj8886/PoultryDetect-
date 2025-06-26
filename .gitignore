@@ -1,0 +1,27 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environment
+venv/
+env/
+
+# Flask static uploads
+static/uploads/
+
+# Model files (if too big — or better to use Git LFS for large files)
+*.h5
+
+# System files
+.DS_Store
+
+# IDE / editor folders
+.vscode/
+.idea/
+
+# PDF reports or generated files
+reports/
+*.pdf
+"venv/" 
+"*.h5" 

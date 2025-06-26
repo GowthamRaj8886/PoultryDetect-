@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research & Training | PoultryDetect+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans min-h-screen">
+  <!-- Navigation -->
+  <nav class="flex justify-between items-center px-6 py-4 border-b border-gray-700">
+    <div class="flex items-center space-x-4">
+      <a href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="h-16 w-16 rounded-lg shadow-md">
+      </a>
+      <span class="text-2xl font-bold text-white">PoultryDetect+</span>
+    </div>
+
+    <div class="space-x-6 text-sm uppercase tracking-wider">
+      <a href="{{ url_for('index') }}" class="hover:text-green-400">Home</a>
+      <a href="{{ url_for('about') }}" class="hover:text-green-400">About</a>
+      <a href="{{ url_for('contact') }}" class="hover:text-green-400">Contact</a>
+      <a href="{{ url_for('training') }}" class="hover:text-green-400">Research & Training</a>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-8">Research & Training Hub</h1>
+
+    <!-- Introduction -->
+    <section class="max-w-4xl mx-auto mb-12 text-center">
+      <p class="text-lg text-gray-300 mb-4">
+        Welcome to the PoultryDetect+ Training Hub. Here you'll find essential resources, datasets, and tutorials to help you enhance your AI-powered poultry disease detection skills and veterinary knowledge.
+      </p>
+    </section>
+
+    <!-- Downloadable Resources -->
+    <section class="max-w-4xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-green-400">📂 Downloadable Resources</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-2">
+        <li>
+          <a href="{{ url_for('static', filename='research_data.csv') }}" download class="text-green-400 hover:underline">
+            Download Poultry Disease Research Dataset
+          </a>
+        </li>
+        <li>
+          <a href="#" class="text-green-400 hover:underline">
+            AI Model Training Guide (PDF) — Coming Soon
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Video Tutorials -->
+    <section class="max-w-4xl mx-auto mb-12">
+      <h2 class="text-2xl font-bold mb-4 text-green-400">🎥 Video Tutorials</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <iframe class="w-full h-64 rounded-lg" src="https://youtu.be/AMyxF_4w7RA" title="Intro Video" frameborder="0" allowfullscreen></iframe>
+        <iframe class="w-full h-64 rounded-lg" src="https://youtu.be/OHMp3EX1HyE" title="AI Training Tutorial" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Contribute Research -->
+    <section class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4 text-green-400">🤝 Contribute Your Research</h2>
+      <p class="text-gray-300 mb-4">
+        Have valuable datasets or AI models for poultry health? Contribute to the PoultryDetect+ community by sharing your work.
+      </p>
+      <a href="mailto:research@poultrydetect.com" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-md">Email Us</a>
+    </section>
+  </main>
+
+  <footer class="mt-12 bg-black border-t border-gray-700 text-center py-4 text-sm text-gray-400">
+  © 2025 PoultryDetect+. All rights reserved.
+</footer>
+
+</body>
+</html>
