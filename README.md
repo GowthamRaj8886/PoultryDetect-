@@ -61,3 +61,9 @@ Notes:
 License:
 --------
 This project is for educational and research use. Commercial distribution is not permitted without permission.
+
+## 📽️ Demonstration Video
+
+You can view the demonstration video for the PoultryDetect project here:
+
+👉 [Click to Watch Demo Video](https://drive.google.com/drive/folders/1JQtPsVChqjSF5usGus3rTDMO8f0RkdBp?usp=sharing)
